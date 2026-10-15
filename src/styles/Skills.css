@@ -1,0 +1,117 @@
+.skills {
+  padding: 120px 8%;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Glow */
+.skills::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(56,189,248,.12), transparent 70%);
+  left: -200px;
+  top: -150px;
+  z-index: 0;
+}
+
+.skills > * {
+  position: relative;
+  z-index: 1;
+}
+
+.stack {
+  color: #8b5cf6;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.skills h2 {
+  margin-top: 10px;
+  font-size: 70px;
+  font-weight: 800;
+  background: linear-gradient(90deg,#38bdf8,#2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.skills p {
+  max-width: 700px;
+  margin: 25px auto 70px;
+  color: #94a3b8;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 35px;
+}
+
+.skill-box {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  padding: 28px 20px;
+  transition: .35s;
+  backdrop-filter: blur(15px);
+}
+
+.skill-box:hover {
+  transform: translateY(-10px);
+  border-color: #38bdf8;
+  box-shadow: 0 15px 35px rgba(56,189,248,.25);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 20px;
+  background: #161f34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.skill-box h4 {
+  color: #e2e8f0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Technology Colors */
+
+.skill-box:nth-child(1) .icon { color:#e34f26; }   /* HTML */
+.skill-box:nth-child(2) .icon { color:#1572B6; }   /* CSS */
+.skill-box:nth-child(3) .icon { color:#f7df1e; }   /* JS */
+.skill-box:nth-child(4) .icon { color:#61dafb; }   /* React */
+.skill-box:nth-child(5) .icon { color:#3776ab; }   /* Python */
+.skill-box:nth-child(6) .icon { color:#ffffff; }   /* Flask */
+.skill-box:nth-child(7) .icon { color:#00758f; }   /* MySQL */
+.skill-box:nth-child(8) .icon { color:#f05032; }   /* Git */
+.skill-box:nth-child(9) .icon { color:#ffffff; }   /* GitHub */
+.skill-box:nth-child(10) .icon { color:#007ACC; }  /* VS Code */
+/* .skill-box:nth-child(11) .icon { color:#ffffff; }  Ollama */
+
+@media (max-width:768px){
+
+.skills h2{
+    font-size:48px;
+}
+
+.skills-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
